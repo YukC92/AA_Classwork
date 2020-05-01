@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: green;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+
+h2 {
+    font-size: 32px;
+}
+
+.ingredients_list {
+    list-style: square inside;
+}
+
+.order_list {
+    list-style: circle;
+}
+
+header > img {
+    width : 100px;
+}
+
+ul li a {
+    text-decoration: none;
+    color : inherit
+}
+
