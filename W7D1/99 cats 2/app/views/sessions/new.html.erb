@@ -1,0 +1,15 @@
+<h1>Log in to cats.</h1>
+
+<form action="<%= sessions_url %>" method="POST">
+    <label>Username:
+        <input type="text" name="user[username]" value="<%= @user.username%>">
+    </label>
+    <br><br>
+
+    <label>Password:
+        <input type="text" name="user[password]" value="<%= @user.password%>"> 
+    </label>
+    <br><br>
+
+    <input type="submit" >
+</form>

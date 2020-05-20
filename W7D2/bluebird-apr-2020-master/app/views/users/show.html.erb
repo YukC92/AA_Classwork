@@ -1,0 +1,9 @@
+<h1>This is our user!</h1>
+
+<!-- <ul>
+    <li><%#= @user.username %></li>
+    <li><%#= @user.email %></li>
+    <li><%#= @user.age %></li>
+</ul> -->
+
+<%= render("users", {banana: @user, action: :show}) %>

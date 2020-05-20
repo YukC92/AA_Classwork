@@ -1,0 +1,21 @@
+<ul>
+    <li><%= banana.username %></li>
+    <li><%= banana.email %></li>
+    <li><%= banana.age %></li>
+
+    <li>
+        <form action="<%= user_url(banana) %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            
+            <input type="submit" value="Avadakedavra !!">
+        </form>
+    </li>
+
+    <% if action == :show %>
+        <li><a href="<%= users_url %>">take me to users index. (plz)</a></li>
+    <% else %>
+        <li><a href="<%= user_url(banana) %>">show me dis user. (now!)</a></li>
+    <% end %>
+</ul>

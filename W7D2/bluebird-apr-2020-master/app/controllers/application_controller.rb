@@ -1,0 +1,30 @@
+class ApplicationController < ActionController::Base
+  # skip_before_action :verify_authenticity_token 
+
+  helper_method :current_user, :logged_in? # Gives us access to these methods in the views
+
+  # Remember: C.R.L.L.L. 
+
+  def current_user # finds a user based on the cookie in the HTTP request
+    @current_user ||= User.find_by(session_token: session[:session_token]) 
+  end
+
+  def require_login
+    redirect_to new_session_url unless logged_in?
+  end
+
+  def login(user) # resets a users session_token and sets a cookie on the clients browser
+    session[:session_token] = user.reset_session_token!
+  end
+
+  def logout 
+    current_user.reset_session_token! if logged_in? # resets the token
+    session[:session_token] = nil # clears the cookie 
+    @current_user = nil 
+  end
+
+  def logged_in? # turns value of current user to true or false
+    !!current_user
+  end
+  
+end

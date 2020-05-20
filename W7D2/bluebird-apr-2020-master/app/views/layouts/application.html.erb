@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlueBird20</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <h1>Twittily Tootily Erik</h1>
+    
+    <% if logged_in? %>
+      <h2>Welcome Back <%= current_user.username %>!!!!!! </h2>
+      <form action="<%= session_url %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Get out of here">
+      </form>
+    <% else %>
+      <a href="<%= new_user_url %>">Join Us</a>
+      <a href="<%= new_session_url %>">Get back in here</a>
+    <% end %>
+    
+    <%= yield %>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <h1><%= error %></h1>  
+      <% end %>
+    <% end %>
+    
+  </body>
+</html>

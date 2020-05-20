@@ -1,0 +1,10 @@
+<h1>This is all da users.</h1>
+
+<% @users.each do |user| %>
+    <!-- <ul>
+        <li><%#= user.username %></li>
+        <li><%#= user.email %></li>
+        <li><%#= user.age %></li>
+    </ul> -->
+    <%= render "users", banana: user, action: :index %>
+<% end %>

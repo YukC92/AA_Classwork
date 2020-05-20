@@ -1,0 +1,27 @@
+<h1>wizzy mekover!!!</h1>
+<!-- <form action="<%#= user_url(@user) %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label>Username: 
+        <input type="text" name="user[username]" 
+            value="<%#= @user.username %>">
+        <%# the name attribute basically dictates how the 
+        input's value is placed into params %>
+        <%# it's just an html attribute %>
+    </label>
+    <br><br>
+    
+    <label for="email">Email: </label>
+    <input id="email" type="text" name="user[email]" 
+        value="<%#= @user.email %>" >
+    <br><br>
+    
+    <label>Age: 
+        <input type="text" name="user[age]" 
+            value="<%#= @user.age %>" >
+    </label>
+    <br><br>
+
+    <input type="submit" value="Transfigure">
+</form> -->
+
+<%= render "form", banana: @user, type: :edit %>
