@@ -1,0 +1,20 @@
+<h1>sign up a user</h1>
+
+
+<form action="<%= users_url %>" method="post">
+    <label>Username: 
+        <input type="text" name="user[username]" >
+        <%# the name attribute basically dictates how the 
+        input's value is placed into params %>
+        <%# it's just an html attribute %>
+    </label>
+    <br><br>
+    
+    <label for="password">Password: </label>
+    <input id="password" type="text" name="user[password]" >
+    <br><br>
+
+    <input type="submit" value="Create User plz">
+</form>
+
+
