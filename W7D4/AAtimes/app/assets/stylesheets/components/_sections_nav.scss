@@ -1,0 +1,25 @@
+.sections-nav {
+    display: flex; 
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.sections-nav ul {
+    display: flex;
+    padding: 10px;
+}
+
+
+.sections-nav li {
+	margin: 10px;
+    cursor: pointer;
+    
+}
+
+.sections-nav li a{
+    text-transform: uppercase;
+}
+
+.sections-nav li:hover {
+	background-color: $light-gray;
+}
