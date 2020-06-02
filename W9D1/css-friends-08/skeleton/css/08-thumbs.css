@@ -1,0 +1,16 @@
+/* PHASE 8: Thumbs */
+.thumb:before {
+    display: block;
+    position: absolute;
+    color: white;
+    background-color: block;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.thumb {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
