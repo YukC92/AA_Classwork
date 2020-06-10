@@ -1,0 +1,23 @@
+.time {
+    color: white;
+    font-family: 'Abel', sans-serif;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.all-tabs {
+    display: flex;
+    border: 1px solid blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+.tab:hover {
+    background-color: blue;
+    color: white;
+}
